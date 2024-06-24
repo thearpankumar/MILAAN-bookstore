@@ -18,7 +18,7 @@ This repository contains a Flask application for displaying featured books with 
 ```bash
 git clone https://github.com/your-username/featured-books-flask-app.git
 cd featured-books-flask-app
-
+```
 
 ```bash 
 
@@ -29,7 +29,7 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install -r requirements.txt
-
+```
 
 ### Additional Notes:
 1. **Database Configuration**: Update `DATABASE_URI` with your actual MySQL credentials.
