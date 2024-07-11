@@ -10,23 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="images/Milaaan.png">
+    <link rel="shortcut icon" href="images/Milaaan.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Milaan Yugam</title>
+    <title>Milaan Publication</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg bg-color py-5 pt-lg-5">
         <div class="container">
-            <a class="navbar-brand text-white" href="#">Milaan Yugam</a>
+            <a class="navbar-brand text-white" href="#">Milaan Publication</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+             <!-- <img src="{{ url_for('static', filename='index_images/logo.png') }}" alt="link" class="rounded image-fluid"  width="200px">  -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -45,22 +46,20 @@
                         <a class="nav-link text-capitalize" href="#Community_section">Community</a>
                     </li>
                     {% if session.get('username') %}
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="#">Welcome, {{ session.get('username') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="{{ url_for('logout') }}">Log Out</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="#">Welcome, {{ session.get('username') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="{{ url_for('logout') }}">Log Out</a>
+                    </li>
                     {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="{{ url_for('login') }}">Log In</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="{{ url_for('login') }}">Log In</a>
+                    </li>
                     {% endif %}
                 </ul>
             </div>
-            
-
-            </div>
+        </div>
         </div>
     </nav>
 
@@ -71,8 +70,8 @@
             <div class="row mb-5">
                 <div
                     class=" mt-5 mt-lg-0 text-center text-lg-start order-lg-0 order-1 col-12 col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
-                    <h1 id="About_section" class="text-capitalize fw-bolder text-white"> lets us give wings to the
-                        thought </h1>
+                    <h1 id="About_section" class="text-capitalize fw-bolder text-white"> let's us give wings to the
+                        thoughts. </h1>
                     <p class="mt-3 mb-5 para-width  text-light-grey"> The writer is the mirror of the society, writes
                         home community with these thoughts to all of you pen lovers. Hearty welcome to Writing Home is a
                         writing fraternity where writers and their newly sprouted ideas get proper space, where they
@@ -90,7 +89,8 @@
                 <!--            hero section image -->
                 <div class="col-12 col-md-12 col-lg-6  order-lg-1 order-0">
                     <div class="text-center text-lg-end">
-                        <video src="{{ url_for('static', filename='index_images/hero.mp4') }}" loop autoplay muted class="hero-video--section">
+                        <video src="{{ url_for('static', filename='index_images/hero.mp4') }}" loop autoplay muted
+                            class="hero-video--section">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -123,17 +123,22 @@
             <div class="row g-5">
                 <div class="col-12 col-lg-4 col-md-12">
                     <div class="text-center card-box rounded-2 p-5">
-                        <img src="{{ url_for('static', filename='index_images/link.gif') }}" alt="link" class="img-fluid" width="200px">
+                        <img src="{{ url_for('static', filename='index_images/link.gif') }}" alt="link"
+                            class="img-fluid" width="200px">
 
-                        <h5 class="my-3 fw-normal"> Writing Book </h5>
+                        <h5 class="my-3 fw-normal"> Content writing / Film script writing.
+                        </h5>
 
-                        <p class="mb-5"> Here you can write your own book with the help of our best mentors.
-                            We are here to provid you the best flatform with fastest response.
-                            Just upload your document.
+                        <p class="mb-5" style="height: 30vh; overflow-y: auto"> ● "Join us and take your writing career to new heights! Whether you're passionate
+                            about crafting compelling content or weaving captivating film scripts, we're here to
+                            amplify your voice. At [Milaan Publication House], we believe in rewarding talent with
+                            generous royalties and providing a platform to showcase your creativity. Join our
+                            vibrant community of authors and let's elevate your career together!
                         </p>
 
                         <div class="d-flex justify-content-center align-items-center ">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1bRXVB1eI0cHvV0OeNEZHGIyDdAj40ibUpc5vYBzimE1IVg/viewform?usp=sf_link" target="_blank"
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1bRXVB1eI0cHvV0OeNEZHGIyDdAj40ibUpc5vYBzimE1IVg/viewform?usp=sf_link"
+                                target="_blank"
                                 class="icon-span rounded-circle d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-arrow-right"> </i>
                             </a>
@@ -143,16 +148,21 @@
 
                 <div class="col-xxl-4 col-lg-4 col-12  ">
                     <div class=" card-box rounded-2 p-5 text-center shadow">
-                        <img alt="GIF Image" class="img-fluid" src="{{ url_for('static', filename='index_images/speaker.gif') }}" width="200px">
+                        <img alt="GIF Image" class="img-fluid"
+                            src="{{ url_for('static', filename='index_images/speaker.gif') }}" width="200px">
 
                         <h5 class="my-3 fw-normal"> Publish your book</h5>
-                        <p class=" mb-5">
-                           If you are a writer and want to publish your own Book
-                           We are here to provid you the best flatform with fastest response.
-                           Just upload your document.
+                        <p class=" mb-5" style="height: 30vh; overflow-y: auto">
+                            ● Discover excellence in publishing with [Milaan Publication House]! As a new author, unlock
+                            the full potential of your manuscript with our unparalleled publishing services. From expert
+                            editing and design to strategic marketing, we ensure your work shines in every format. Join
+                            our community of passionate readers who trust us to deliver captivating stories and insightful
+                            content. At[ milaan Publication House], we're committed to excellence, making us your
+                            ultimate partner in the world of publishing.
                         </p>
                         <div class="  d-flex justify-content-center align-items-center ">
-                            <a class="icon-span d-flex justify-content-center align-items-center rounded-circle mb-3" target="_blank"
+                            <a class="icon-span d-flex justify-content-center align-items-center rounded-circle mb-3"
+                                target="_blank"
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSc1bRXVB1eI0cHvV0OeNEZHGIyDdAj40ibUpc5vYBzimE1IVg/viewform?usp=sf_link">
                                 <i class="fa-solid fa-arrow-right"> </i>
                             </a>
@@ -162,12 +172,19 @@
 
                 <div class="col-xxl-4 col-lg-4 col-12 ">
                     <div class=" card-box rounded-2 p-5 text-center">
-                        <img alt="GIF Image" class="img-fluid" src="{{ url_for('static', filename='index_images/seo.gif') }}" width="200px">
-                        <h5 class="my-3 fw-normal ">Article Writing </h5>
-                        <p class=" mb-5">
-                            It may be the topics of interest of the writer or it may be related to some current issues.
-                            We are here to provid you the best flatform with fastest response.
-                            Just upload your document.
+                        <img alt="GIF Image" class="img-fluid"
+                            src="{{ url_for('static', filename='index_images/seo.gif') }}" width="200px">
+                        <h5 class="my-3 fw-normal ">Workshops</h5>
+                        <p class=" mb-5"style="height: 30vh; overflow-y: auto">
+                            Calling all aspiring authors and seasoned writers! Join our exclusive monthly
+                            workshops designed to elevate your literary skills and unleash your creativity.
+                            Whether you're crafting your first novel, perfecting a screenplay, or polishing a
+                            collection of poems, our expert-led sessions provide invaluable guidance and
+                            inspiration.<br>● Expert Guidance: Learn from accomplished authors and industry
+                            professionals.<br>● Practical Tips: Master the art of storytelling, character development, and
+                            more<br>● Community Support: Connect with like-minded writers and build lasting
+                            connections.
+                            
                         </p>
                         <div class="  d-flex justify-content-center align-items-center ">
                             <a class="icon-span d-flex justify-content-center align-items-center rounded-circle mb-3"
@@ -195,7 +212,8 @@
                 <!--            hero section image -->
                 <div class="col-12 col-md-12 col-lg-6 img-section">
                     <figure>
-                        <img src="{{ url_for('static', filename='index_images/phone.gif') }}" alt="digital products" class="img-fluid">
+                        <img src="{{ url_for('static', filename='index_images/phone.gif') }}" alt="digital products"
+                            class="img-fluid">
                     </figure>
                 </div>
 
@@ -203,15 +221,18 @@
                 <div class="col-12 col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
                     <h2 class="text-capitalize fw-bolder text-white "> Steps to Become a Successful communtiy<br> member
                     </h2>
-                    <p class="mt-3 mb-5 para-width  text-light-grey">Success is the accomplishment of certain goals you set in life.
-                         Each person has different ideas of what success might look like for them, like getting a certain job,
-                          earning a certain amount of money or owning a house. Regardless of the goals,
-                           there are some steps you can take to be successful in your life.
-                            In this article, we discuss how you can measure success and outline the steps to be successful in life... </p>
+                    <p class="mt-3 mb-5 para-width  text-light-grey">Success is the accomplishment of certain goals you
+                        set in life.
+                        Each person has different ideas of what success might look like for them, like getting a certain
+                        job,
+                        earning a certain amount of money or owning a house. Regardless of the goals,
+                        there are some steps you can take to be successful in your life.
+                        In this article, we discuss how you can measure success and outline the steps to be successful
+                        in life... </p>
 
                     <div class="text-center w-100 text-md-start">
-                        <a class="icon-span d-flex justify-content-center align-items-center rounded-circle mb-3" target="_blank"
-                            href="/Resgistrationpage/registration.html">
+                        <a class="icon-span d-flex justify-content-center align-items-center rounded-circle mb-3"
+                            target="_blank" href="{{ url_for('register')}}">
                             <i class="fa-solid fa-arrow-right"> </i>
                             <h1 class="test text-sm-center w-25 p-lg-auto">Registration</h1>
                         </a>
@@ -238,8 +259,8 @@
             <div class="row g-5">
                 <div class="col-12 col-m-12 col-lg-6">
                     <div class=" d-flex px-3 py-5 shadow">
-                        <img alt="GIF Image" class=" d-md-block d-none img-fluid mx-3" src="{{ url_for('static', filename='index_images/phone.gif') }}"
-                            width="150px">
+                        <img alt="GIF Image" class=" d-md-block d-none img-fluid mx-3"
+                            src="{{ url_for('static', filename='index_images/phone.gif') }}" width="150px">
                         <div>
                             <p class="mb-3 fw-bolder">Writing Competition</p>
                             <p> Reach a wider audience by creating engaging ads on platforms like Facebook, Instagram
@@ -252,8 +273,8 @@
 
                 <div class="col-xl-6 col-md-12 ">
                     <div class="d-flex  px-3 py-5 shadow ">
-                        <img alt="GIF Image" class=" d-md-block d-none  img-fluid mx-3" src="{{ url_for('static', filename='index_images/online.gif') }}"
-                            width="150px">
+                        <img alt="GIF Image" class=" d-md-block d-none  img-fluid mx-3"
+                            src="{{ url_for('static', filename='index_images/online.gif') }}" width="150px">
 
                         <div class="row ">
                             <p class="mb-3 fw-bolder"> Short Story Competition </p>
@@ -268,8 +289,8 @@
 
                 <div class="col-xl-6 col-md-12 ">
                     <div class="d-flex  px-3 py-5 shadow ">
-                        <img alt="GIF Image" class=" d-md-block d-none  img-fluid mx-3" src="{{ url_for('static', filename='index_images/online.gif') }}"
-                            width="150px">
+                        <img alt="GIF Image" class=" d-md-block d-none  img-fluid mx-3"
+                            src="{{ url_for('static', filename='index_images/online.gif') }}" width="150px">
 
                         <div class="row ">
                             <p class="mb-3 fw-bolder">Sunday Times Short Story </p>
@@ -282,8 +303,8 @@
 
                 <div class="col-xl-6 col-md-12 ">
                     <div class="d-flex  px-3 py-5 shadow ">
-                        <img alt="GIF Image" class=" d-md-block d-none  img-fluid mx-3" src="{{ url_for('static', filename='index_images/phone.gif') }}"
-                            width="150px">
+                        <img alt="GIF Image" class=" d-md-block d-none  img-fluid mx-3"
+                            src="{{ url_for('static', filename='index_images/phone.gif') }}" width="150px">
 
                         <div class="row ">
                             <p class="mb-3 fw-bolder">The Month Poetry</p>
@@ -328,14 +349,18 @@
                         <div class=" row g-5">
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    <div class="card p-3">
+                                        <img src="{{ url_for('static', filename='index_images/Dhanesh.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
-                                        <div class="card-body">
-                                            <h5 class="card-title mb-3">Anushka Raj</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                        <div class="card-body overflow-auto">
+                                            <h5 class="card-title mb-3">Dhanesh</h5>
+                                            <p class="card-text" style="height: 25vh; overflow-y: auto">Being a part of
+                                                Milaan Publication has been a game-changer for me as a writer.
+                                                With my friend's guidance and mentorship, I have grown as a writer,
+                                                exploring different genres and honing my skills.
+                                                From brainstorming ideas to editing drafts,
+                                                we work together as a team, bringing out the best in each other's
+                                                writing.</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -351,13 +376,14 @@
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        <img src="{{ url_for('static', filename='index_images/sneha.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Harsh Raj</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Sneha</h5>
+                                            <p class="card-text " style="height: 30vh; overflow-y: auto">My experience with Milaan Publication House has been nothing short of exceptional.
+                                                 From the initial consultation to the final publication, the team demonstrated unparalleled professionalism and dedication. The editing and 
+                                                 design services were top-notch, ensuring my book was polished to perfection. The marketing support provided was instrumental in reaching a wider audience,
+                                                 and the monthly workshops offered valuable insights that enhanced my writing skills. .</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -372,14 +398,20 @@
 
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    <div class="card p-3">
+                                        <img src="{{ url_for('static', filename='index_images/urmil.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Kishlay kumar</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Urmil Negi</h5>
+                                            <p class="card-text " style="height: 25vh; overflow-y: auto">As a
+                                                17-year-old author, working with [Milaan Publication House
+                                                has been an amazing experience.
+                                                The team is incredibly supportive and professional, helping me refine my
+                                                work while respecting my creative voice.
+                                                Their encouragement and dedication have made me feel confident and
+                                                valued as a young writer.
+                                                I couldn’t have asked for a better platform to start my writing
+                                                journey..</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -401,13 +433,19 @@
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        <img src="{{ url_for('static', filename='index_images/titli.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Aryan Tripathi</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Titli Dutta</h5>
+                                            <p class="card-text " style="height: 25vh; overflow-y: auto">As a young new
+                                                writer, I lack the courage to publish and have little support.
+                                                However, Shekhar,Milaan Publication encourages and supports my writing,
+                                                helping me see myself as a true writer.
+                                                Their guidance and belief in my potential have been invaluable,
+                                                providing the confidence and motivation I needed to pursue my passion.
+                                                Thanks to their encouragement,
+                                                I am now more determined than ever to continue writing and sharing my
+                                                work with the world..</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -423,13 +461,20 @@
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        <img src="{{ url_for('static', filename='index_images/usha.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Hardik pandey</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Usha Krishnan</h5>
+                                            <p class="card-text " style="height: 25vh; overflow-y: auto">As an author
+                                                who has had the pleasure of working with [Milaan Publication house ], I
+                                                can confidently say that their professionalism and dedication are
+                                                unparalleled.
+                                                The editorial team is incredibly supportive, providing insightful
+                                                feedback and ensuring that every piece reaches its full potential. Their
+                                                commitment to excellence and their respect for authors'
+                                                voices make them a standout in the industry.
+                                                I am truly grateful for the opportunity to collaborate with such a
+                                                passionate and trustworthy publication.</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -445,13 +490,19 @@
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        <img src="{{ url_for('static', filename='index_images/harshita.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Sahana</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Hrishita dey</h5>
+                                            <p class="card-text " style="height: 25vh; overflow-y: auto">The working
+                                                experience with Milaan Publication was absolutely the best experiences
+                                                ever.
+                                                It was my first anthology published in a book officially so I am glad
+                                                that it happened.
+                                                Milaan sir is also a great person who has always helped me out. If given
+                                                an opportunity in future I
+                                                wanna work with them
+                                                .</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -473,13 +524,17 @@
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        <img src="{{ url_for('static', filename='index_images/akansha.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Ajay Yadav</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Aakansha</h5>
+                                            <p class="card-text " style="height: 25vh; overflow-y: auto">Milaan
+                                                publication house has helped me to grow as an aspiring writing and it is
+                                                growing many writers like me who just started their journeys
+                                                Iam sure they will shape great writers in future
+                                                Thank you milaan community
+
+                                                .</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -495,13 +550,18 @@
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        <img src="{{ url_for('static', filename='index_images/prem.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Rounak Sinha</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Pushp Kumar </h5>
+                                            <p class="card-text " style="height: 25vh; overflow-y: auto">Milaan
+                                                Publication House is the happiness of my life because of which I have
+                                                been able to improve my writing,
+                                                the support of writer Shekhar Milan Sir has been very helpful to us, I
+                                                am going to publish my book in a few months on behalf of Milaan
+                                                Publication,
+                                                you must join this publication if you want your creations to get a good
+                                                place..</p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -517,13 +577,17 @@
                             <div class="col-12 col-lg-4">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="card p-3" style="width: 18rem;">
-                                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        <img src="{{ url_for('static', filename='index_images/hitesh.jpg') }}"
                                             class="card-img-top" alt="testimonial text">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-3">Vishal Gupta</h5>
-                                            <p class="card-text ">Some quick example text to build on the card title and
-                                                make up
-                                                the bulk of the card's content.</p>
+                                            <h5 class="card-title mb-3">Hitesh kumar</h5>
+                                            <p class="card-text " style="height: 25vh; overflow-y: auto">I For the past
+                                                1.5 years, I have been closely connected with Milaan Publication and its
+                                                owner,
+                                                Mr. Shekhar Milaan. They have consistently involved me in their
+                                                anthologies and competitions,
+                                                fostering a personal and professional relationship that I deeply value.
+                                            </p>
                                             <div class="mt-3">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -556,7 +620,7 @@
 
     <!--ecperts panel section -->
 
-    <section class="common-section mb-5 pt-5 ">
+    <section class="common-section mb-0 pt-3 ">
         <div class="container text-center common-title fw-bold">
             <h2 class="common-heading">Tips and Tricks From <br>Our Experts</h2>
             <hr class="w-25 mx-auto">
@@ -567,7 +631,8 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="card" style="width: 18rem;">
-                            <img src="{{ url_for('static', filename='index_images/1.png') }}" class="card-img-top" alt="...">
+                            <img src="{{ url_for('static', filename='index_images/1.png') }}" class="card-img-top"
+                                alt="...">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <p class="small text-grey ">
@@ -575,11 +640,16 @@
                                     </p>
                                     <p class="small text-grey "> March 3, 2023 </p>
                                 </div>
-                                <h5 class="card-title mt-3">Skill Development </h5>
-                                <p class="card-text mt-2 mb-3">When I say develop your skills, 
-                                    I don’t mean related to every business area of that industry.
-                                     This is not very realistic. 
-                                    I mean, the field of your expertise in that industry.</p>
+                                <h5 class="card-title mt-3">Best seller</h5>
+                                <p class="card-text mt-2 mb-3" style="height: 30vh; overflow-y: auto"><bold>1-</bold>*High Demand Genres**: Consider genres like Mystery/Thriller,
+                                     Romance, Science
+                                   Fiction/Fantasy, and Self-help which often have strong reader bases.
+                                <br>*Unique Concept: Books with unique premises or twists on familiar tropes can stand out
+                                in crowded markets<br>Emotional Resonance**: Books that evoke strong emotions or tackle universal themes
+                                tend to attract a wider audience<br>*Series Potential**: Series with compelling characters and ongoing storylines can build a
+                                dedicated readership over time.<br>*Quality Marketing**: Effective marketing strategies tailored to the book's audience can
+                                significantly boost sales and visibility.
+                                </p>
                                 <a href="#" class="btn btn-dark px-4">Read More</a>
                             </div>
                         </div>
@@ -591,17 +661,22 @@
                 <div class="col-xl-3 col-md-6 col-12 ">
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="card" style="width: 18rem;">
-                            <img alt="..." class="card-img-top" src="{{ url_for('static', filename='index_images/2.png') }}">
+                            <img alt="..." class="card-img-top"
+                                src="{{ url_for('static', filename='index_images/2.png') }}">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
 
                                     <p class="small text-grey "><i class="fa-solid fa-book-open-reader"></i> : 5000 </p>
                                     <p class="small text-grey "> March 3, 2020 </p>
                                 </div>
-                                <h5 class=" mt-3 card-title">Publisher</h5>
-                                <p class="card-text mt-2 mb-3">.In publishing, we have the privilege of 
-                                    bringing diverse voices and perspectives to the forefront.We will help you to take out your writing
-                                skills to the forefront.Providing you correct platform.</p>
+                                <h5 class=" mt-3 card-title" >Publisher</h5>
+                                <p class="card-text mt-2 mb-3" style="height: 30vh; overflow-y: auto">.*Choosing Your Genre and Topic**: Research trending genres and topics within your
+                                    niche. Look for gaps in the market or emerging trends.<br>2. **Crafting a Compelling Hook**: Start your book with a captivating opening that hooks the
+                                    reader immediately.<br>3. **Developing Strong Characters**: Ensure your characters are well-developed with clear
+                                    motivations and arcs that resonate with your target audience.<br>4. **Pacing and Structure**: Maintain a balanced pace throughout the book, with well-timed
+                                    plot twists and revelations.<br>5. **Quality Editing**: Invest in professional editing to polish your manuscript before
+                                    publication.
+</p>
                                 <a class="px-4 py-2 btn btn-dark" href="#">Read More</a>
                             </div>
                         </div>
@@ -611,19 +686,22 @@
                 <div class="col-xl-3 col-md-6 col-12 ">
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="card" style="width: 18rem;">
-                            <img alt="..." class="card-img-top" src="{{ url_for('static', filename='index_images/3.png') }}">
+                            <img alt="..." class="card-img-top"
+                                src="{{ url_for('static', filename='index_images/3.png') }}">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
 
                                     <p class="small text-grey "><i class="fa-solid fa-book-open-reader"></i> : 5000 </p>
                                     <p class="small text-grey "> March 3, 2020 </p>
                                 </div>
-                                <h5 class=" mt-3 card-title">Content Designer</h5>
-                                <p class="card-text mt-2 mb-3">If you work as a graphic designer
-                                    fashion designer,
-                                     or in any other creative field, 
-                                     inspiration is the key to success.We are looking for the good 
-                                    content and poster designer</p>
+                                <h5 class=" mt-3 card-title">Editor</h5>
+                                <p class="card-text mt-2 mb-3"style="height: 30vh; overflow-y: auto">1. **Focus on Clarity and Consistency**: Ensure your writing is clear, concise, and consistent
+                                    in tone and style.<br>2. **Revision and Rewriting**: Don't hesitate to revise and rewrite parts that don't flow
+                                    smoothly or advance the story effectively<br>3. **Feedback Loop**: Seek feedback from beta readers or critique partners to gain fresh
+                                    perspectives on your manuscript.<br>4. **Grammar and Mechanics**: Pay attention to grammar, punctuation, and sentence
+                                    structure to enhance readability<br>5. **Staying True to Your Voice**: Maintain authenticity in your writing style while refining it
+                                    for clarity and impact.
+                                    </p>
                                 <a class="px-4 py-2 btn btn-dark " href="#">Read More</a>
                             </div>
                         </div>
@@ -634,30 +712,142 @@
                 <div class="col-xl-3 col-md-6 col-12 ">
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="card" style="width: 18rem;">
-                            <img alt="..." class="card-img-top" src="{{ url_for('static', filename='index_images/4.png') }}">
+                            <img alt="..." class="card-img-top"
+                                src="{{ url_for('static', filename='index_images/4.png') }}">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
 
                                     <p class="small text-grey "><i class="fa-solid fa-book-open-reader"></i> : 5000 </p>
                                     <p class="small text-grey "> March 3, 2020 </p>
                                 </div>
-                                <h5 class=" mt-3 card-title">Cover Developer</h5>
-                                <p class="card-text mt-2 mb-3">A language that doesn’t affect the way you think about programming is not worth knowing.”
-
-                                    “Fools ignore complexity. 
-                                    “If art interprets our dreams,
-                                    up the bulk of
-                                    the card's content.</p>
+                                <h5 class=" mt-3 card-title">Marketing Expert</h5>
+                                <p class="card-text mt-2 mb-3"style="height: 30vh; overflow-y: auto">1. **Identifying Your Audience**: Define your target audience based on demographics,
+                                    interests, and reading preferences.<br>2. **Building an Online Presence**: Utilize social media, author websites, and blogs to
+                                    engage with potential readers and build a community<br>3. **Utilizing Book Launch Strategies**: Plan pre-launch activities, such as teasers,
+                                    giveaways, and author interviews, to generate buzz.<br>4. **Book Reviews and Influencers**: Seek reviews from reputable sources and collaborate
+                                    with influencers or bloggers in your genre.<br>5. **Long-Term Marketing**: Develop a marketing plan that includes sustained promotion
+                                    efforts post-launch, such as book signings, speaking engagements, and virtual tours
+                                    .</p>
                                 <a class="px-4 py-2 btn btn-dark" href="#">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
+            <!-- this is for F&Q -->
+            <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
+            <p class="text-center mb-5">
+                Find the answers for the most frequently asked questions below
+            </p>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i>What types of
+                        books do
+                        you publish?</h6>
+                    <p>
+                        <strong><u>Absolutely!</u></strong> We publish a wide range of genres,
+                        including fiction, non-fiction, memoirs, self-help,
+                        academic texts, and children’s books. We’re always looking for unique voices and
+                        compelling stories.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i> How long does it take
+                        to publish a book?</h6>
+                    <p>
+                        <strong><u>The timeline for publishing a book can vary, but it typically takes about months,from
+                                manuscript acceptance to the book's release.</u></strong>This includes editing, design,
+                        printing, and
+                        marketing phases.
+
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i> What marketing and
+                        promotional
+                        support do you provide?
+                    </h6>
+                    <p>
+                        We provide comprehensive marketing and promotional support, including book launch
+                        events, press releases, social media campaigns, and distribution to bookstores and online
+                        retailers.
+
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i> What is your review
+                        process
+                        for submitted manuscripts?
+                    </h6>
+                    <p>
+                        Our editorial team reviews each submission carefully. If your manuscript interests us, we will
+                        request the full manuscript for further evaluation. The entire review process can take up to
+                        20 day's .
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2"></i> Do you charge any fees
+                        for
+                        publishing?
+                    </h6>
+                    <p><strong><u>Unfortunately no</u>.</strong>We are a traditional publisher
+                        and do not charge authors any fees for publishing. We have
+                        some basic packages to cover all the costs related to editing, design, printing and marketing
+                        so that the writer can get the best work as per his choice.</p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i> What are the
+                        royalties and
+                        how are they calculated?</h6>
+                    <p>
+                        Of course! Authors receive royalties based on the net sales of their books. The royalty rates
+                        vary
+                        depending on the format (e.g., print, e-book, audiobook) and are outlined in the publishing
+                        contract.
+
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i> How long does it
+                        tak
+                        e to publish a book?</h6>
+                    <p>
+                        The timeline for publishing a book can vary, but it typically takes about months,from
+                        manuscript acceptance to the book's release. This includes editing, design, printing, and
+                        marketing phases.
+
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i>Will my book be
+                        available internationally?</h6>
+                    <p>
+                        Yes, we distribute our books internationally through various channels, ensuring they reach a
+                        global audience,but only that book which comes under international package.
+
+
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i> What rights do I
+                        retain as an author?</h6>
+                    <p>
+                        The specific rights you retain will be outlined in your publishing contract/ agreement
+                        Typically, you will retain rights to your work, with the publisher holding certain exclusive
+                        rights for a defined period.
+
+                    </p>
+                </div>
             </div>
         </div>
-
     </section>
 
     <!--experts panel section ends -->
@@ -731,28 +921,31 @@
                     <div class="col-lg-4 ">
                         <div class="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
                             <div class="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
-                                <img src="{{ url_for('static', filename='index_images/call.gif') }}" alt="GIF Image" class="img-fluid">
-                            </div>
-                            <p class="text-white">+91-7081985907</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 ">
-                        <div class="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
-                            <div class="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
-                                <!--                            <i class="fa-solid fa-phone"></i>-->
-                                <img src="{{ url_for('static', filename='index_images/email.gif') }}" alt="GIF Image" class="img-fluid">
-                            </div>
-                            <p class="text-white">Singhvickey546@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 ">
-                        <div class="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
-                            <div class="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
-                                <img src="{{ url_for('static', filename='index_images/map.gif') }}" alt="GIF Image" class="img-fluid">
+                                <img src="{{ url_for('static', filename='index_images/call.gif') }}" alt="GIF Image"
+                                    class="img-fluid">
                             </div>
                             <p class="text-white">+91-8957795819</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 ">
+                        <div class="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
+                            <div class="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
+                               
+                                <img src="{{ url_for('static', filename='index_images/email.gif') }}" alt="GIF Image"
+                                    class="img-fluid">
+                            </div>
+                            <p class="text-white">Milaanyugampublication@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 ">
+                        <div class="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
+                            <div class="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
+                                <img src="{{ url_for('static', filename='index_images/map.gif') }}" alt="GIF Image"
+                                    class="img-fluid">
+                            </div>
+                            <p class="text-white">Om nagar colony varanasi, UP-221007</p>
                         </div>
                     </div>
                 </div>
@@ -796,39 +989,41 @@
                                 <div class="footer-links">
                                     <h4 class="mt-5 mb-3 text-white">Subscribe</h4>
                                     <div class="input-group mb-3 w-75">
-                                        <input type="text" class="form-control" name="email" id="subscribe-email" placeholder="Recipient's email"
-                                            aria-label="Recipient's email" aria-describedby="basic-addon2">
-                                        <button type="submit" class="input-group-text btn btn-primary" id="subscribe-button">Subscribe</button>
+                                        <input type="text" class="form-control" name="email" id="subscribe-email"
+                                            placeholder="Recipient's email" aria-label="Recipient's email"
+                                            aria-describedby="basic-addon2">
+                                        <button type="submit" class="input-group-text btn btn-primary"
+                                            id="subscribe-button">Subscribe</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
                         <div id="subscribe-message" style="display: none;"></div>
-                        
+
                         <script>
-                            document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+                            document.getElementById('subscribe-form').addEventListener('submit', function (event) {
                                 event.preventDefault(); // Prevent default form submission
-                              
+
                                 // Submit the form using AJAX
                                 fetch('/subscriber', {
-                                  method: 'POST',
-                                  body: new FormData(document.getElementById('subscribe-form'))
+                                    method: 'POST',
+                                    body: new FormData(document.getElementById('subscribe-form'))
                                 })
-                                .then(response => response.json())
-                                .then(data => {
-                                  if (data.status === 'success') {
-                                    // Update button text to "Subscribed"
-                                    document.getElementById('subscribe-button').textContent = "Subscribed";
-                                  } else {
-                                    // Handle errors (optional)
-                                    console.error(data.message);  // Log error message to console
-                                    // You can display an error message in the page using document.getElementById('subscribe-message')
-                                  }
-                                });
-                              });
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (data.status === 'success') {
+                                            // Update button text to "Subscribed"
+                                            document.getElementById('subscribe-button').textContent = "Subscribed";
+                                        } else {
+                                            // Handle errors (optional)
+                                            console.error(data.message);  // Log error message to console
+                                            // You can display an error message in the page using document.getElementById('subscribe-message')
+                                        }
+                                    });
+                            });
                         </script>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -844,7 +1039,7 @@
                     </div>
                     <div class="col-md-4 col-12  ">
                         <div class="d-flex justify-content-center justify-content-lg-end gap-5 mt-lg-0 mt-3">
-                            <a href="https://www.instagram.com/authors.milaan/" target="_blank">
+                            <a href="https://www.instagram.com/milaanpublication?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                                 <div
                                     class="icon-span d-flex justify-content-center align-items-center rounded-circle mb-3">
                                     <i class="fa-brands fa-instagram"></i>
@@ -854,7 +1049,7 @@
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
                             <div class="icon-span d-flex justify-content-center align-items-center rounded-circle mb-3">
-                                <!--                            <i class="fa-brands fa-whatsapp"></i>-->
+                                <!--  <i class="fa-brands fa-whatsapp"></i>-->
                                 <i class="fa-brands fa-twitter"></i>
                             </div>
                         </div>
@@ -875,6 +1070,8 @@
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 </body>
 
 </html>

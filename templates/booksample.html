@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store Website</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bookmaster_css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+
     <section>
 
         <nav>
 
             <div class="logo">
-                <img src="{{ url_for('static', filename='bookmaster_img/logo.png') }}">
+                <img src="{{ url_for('static', filename='bookmaster_img/logo1.png') }}">
             </div>
 
-            <ul class="navigation">  
-                <li class="nav-item">    
-                    <a href="{{ url_for('index') }}" class="nav-link">Home</a>  
+            <ul class="navigation">
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about1" class="nav-link">About</a>
@@ -38,20 +42,20 @@
                     <a href="#blog1" class="nav-link">Blog</a>
                 </li>
                 {% if session.get('username') %}
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Welcome, {{ session.get('username') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url_for('logout') }}" class="nav-link">Log Out</a>
-                    </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Welcome, {{ session.get('username') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('logout') }}" class="nav-link">Log Out</a>
+                </li>
                 {% else %}
-                    <li class="nav-item">
-                        <a href="{{ url_for('login') }}" class="nav-link">Log In</a>
-                    </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('login') }}" class="nav-link">Log In</a>
+                </li>
                 {% endif %}
             </ul>
-            
-			  
+
+
 
             <div class="social_icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -66,16 +70,22 @@
                 <h1>WELCOME TO<br><span>BOOK STORE</span></h1>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestias atque laborum 
-                    non fuga ex deserunt. Exercitationem velit ducimus praesentium, obcaecati hic voluptate id 
-                    tenetur fuga illum quidem omnis? Rerum?
+                    Welcome to our dynamic online bookstore, where the beauty of literature transcends borders.
+                     Here, you can explore a diverse collection of books in Hindi, English, and French, catering to a wide range of readers. 
+                     Our catalog boasts not only popular market favorites but also many exclusive titles published by our esteemed publishing house.
+                      Each book is carefully selected to ensure it meets our high standards of quality and literary excellence. Whether you're looking
+                       for the latest bestsellers or hidden gems, 
+                    our bookstore offers a rich tapestry of stories waiting to be discovered. Happy reading!
                 </p>
                 <a href="#" class="main_btn">Buy</a>
 
             </div>
 
-            <div class="main_img">
-                <img src="{{ url_for('static', filename='bookmaster_img/table.png') }}">
+            <div class="main_img ratio"style="height: 75vh; overflow-y: auto">
+                <video src="{{ url_for('static', filename='bookmaster_img/video1.mp4') }}" loop autoplay muted
+                            class="hero-video--section">
+                            Your browser does not support the video tag.
+                        </video>
             </div>
 
         </div>
@@ -95,7 +105,11 @@
                 <i class="fa-solid fa-truck-fast"></i>
                 <h3>Fast Delivery</h3>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    At our publishing house, we pride ourselves on our fast delivery services. We understand the
+importance of timely access to literature and ensure that every order is processed and
+shipped swiftly. Our efficient logistics team and streamlined processes guarantee that your
+books reach you in the shortest time possible, maintaining our commitment to excellent
+customer service and satisfaction.
                 </p>
             </div>
 
@@ -103,7 +117,9 @@
                 <i class="fa-solid fa-headset"></i>
                 <h3>24 x 7 Services</h3>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Our publishing company offers round-the-clock services, ensuring that we are available 24/7
+                    to meet your literary needs. Whether you require assistance with manuscript submissions,
+                    editorial queries, or publishing support, our dedicated team is here to help you at any time.
                 </p>
             </div>
 
@@ -111,7 +127,7 @@
                 <i class="fa-solid fa-tag"></i>
                 <h3>Best Deal</h3>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    In our publication I get the best deal and with the best features you will see are offered
                 </p>
             </div>
 
@@ -119,8 +135,8 @@
                 <i class="fa-solid fa-lock"></i>
                 <h3>Secure Payment</h3>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                </p>
+                    "Our publication house ensures secure payment for both readers and participants, providing
+                    a safe and trustworthy environment for all your literary transactions.
             </div>
 
         </div>
@@ -140,11 +156,19 @@
         <div class="about_tag">
             <h1>About Us</h1>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae cumque atque dolor corporis 
-                architecto. Voluptate expedita molestias maxime officia natus consectetur dolor quisquam illo? 
-                Quis illum nostrum perspiciatis laboriosam perferendis? Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Minus ad eius saepe architecto aperiam laboriosam voluptas nobis voluptates 
-                id amet eos repellat corrupti harum consectetur, dolorum dolore blanditiis quam quo.
+                Joining milaan publication house means becoming part of a vibrant and supportive author
+                community. Here, you'll find a network of like-minded writers, editors, and literary enthusiasts
+                who are passionate about storytelling. We offer comprehensive support at every stage of the
+                publishing process, from manuscript development and editing to cover design and
+                marketing. Our personalized approach ensures that each author receives the attention and
+                resources they need to succeed.<br>At milaan publication house, we believe that every story matters and
+                that literature has the
+                power to transform lives. We are committed to fostering a collaborative environment where
+                creativity flourishes, and authors can thrive. By choosing us as your publishing partner, you
+                are not only joining a distinguished group of literary talents but also embarking on a journey
+                to share your unique voice with the world. Let us help you turn your literary dreams into
+                reality.
+
             </p>
             <a href="#" class="about_btn">Buy</a>
         </div>
@@ -166,252 +190,324 @@
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_1.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book7.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Pathik</h2>
+                    <p class="writer">Shekhar Milaan</p>
+                    <div class="categories">Anthology</div>
+                    <p class="book_price">RS-150<sub><del>Rs-200</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Pathik">
+                        <input type="hidden" name="author_name" value="Shekhar Milaan">
+                        <input type="hidden" name="book_price" value="150">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
+                
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book8.jpg') }}">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Utopia</h2>
+                    <p class="writer">Shekhar Milaan</p>
+                    <div class="categories">Anthology</div>
+                    <p class="book_price">Rs-170<sub><del>Rs-200</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Utopia">
+                        <input type="hidden" name="author_name" value="Shekhar Milaan">
+                        <input type="hidden" name="book_price" value="170">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_2.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book9.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Destiny</h2>
+                    <p class="writer">Shekhar Milaan/p>
+                    <div class="categories">Fiction, Romance</div>
+                    <p class="book_price">Rs-200<sub><del>Rs-220</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Destiny">
+                        <input type="hidden" name="author_name" value="Shekhar Milaan">
+                        <input type="hidden" name="book_price" value="200">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_3.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book10.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Eternity</h2>
+                    <p class="writer">Shekhar Milaaan</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rs-160<sub><del>Rs-180</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Eternity">
+                        <input type="hidden" name="author_name" value="Shekhar Milaan">
+                        <input type="hidden" name="book_price" value="160">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_4.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book11.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>
+                        Stolen heart</h2>
+                    <p class="writer">Shekhar Milaan</p>
+                    <div class="categories"> Romance</div>
+                    <p class="book_price">Rs-120<sub><del>Rs-200</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Stolen heart">
+                        <input type="hidden" name="author_name" value="Shekhar Milaan">
+                        <input type="hidden" name="book_price" value="120">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_5.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book6.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
-
-            </div>
-            
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_6.jpg') }}">
+                    <h2>Asad ke Din</h2>
+                    <p class="writer">Mohan Rakesh</p>
+                    <div class="categories">Non-fiction</div>
+                    <p class="book_price">Rs-100<sub><del>Rs-120</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Asad ke Din">
+                        <input type="hidden" name="author_name" value="Mohan Rakesh">
+                        <input type="hidden" name="book_price" value="100">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
                 </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_7.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/krishna1.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Krishna shobiti</h2>
+                    <p class="writer">Krishna shobiti</p>
+                    <div class="categories">Fiction</div>
+                    <p class="book_price">Rs-600<sub><del>Rs-650</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Krishna shobiti">
+                        <input type="hidden" name="author_name" value="Krishna shobiti">
+                        <input type="hidden" name="book_price" value="600">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_8.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book2.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Mitro Marjani</h2>
+                    <p class="writer">Krishna shobiti</p>
+                    <div class="categories">Fiction,Drama</div>
+                    <p class="book_price">Rs-150<sub><del>Rs-200</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Mitro Marjani">
+                        <input type="hidden" name="author_name" value="Krishna shobiti">
+                        <input type="hidden" name="book_price" value="150">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_9.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book3.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Vardan</h2>
+                    <p class="writer">Prem Chandra</p>
+                    <div class="categories">Fiction, crime Thriller</div>
+                    <p class="book_price">Rs-120<sub><del>Rs-150</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="vardan">
+                        <input type="hidden" name="author_name" value="Prem Chandra">
+                        <input type="hidden" name="book_price" value="120">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_10.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book4.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Gunaho ka Devta</h2>
+                    <p class="writer">Dhramveer Bharti</p>
+                    <div class="categories">Thriller,Romance,non-fiction</div>
+                    <p class="book_price">Rs-120<sub><del>Rs-150</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Gunaho ka Devta">
+                        <input type="hidden" name="author_name" value="Dhramveer Bharti">
+                        <input type="hidden" name="book_price" value="120">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_11.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book5.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Suraj ka Satva Ghoda</h2>
+                    <p class="writer">Dhramveer Bharti</p>
+                    <div class="categories">Thriller,Non-fiction</div>
+                    <p class="book_price">Rs-150<sub><del>Rs-170</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Suraj ka Satva Ghoda">
+                        <input type="hidden" name="author_name" value="Dhramveer Bharti">
+                        <input type="hidden" name="book_price" value="150">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_12.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book12.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Ek Duje Vaste</h2>
+                    <p class="writer">Dhanesh Gawde</p>
+                    <div class="categories">College Romance</div>
+                    <p class="book_price">Rs-250<sub><del>Rs-270</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Ek Duje Vaste">
+                        <input type="hidden" name="author_name" value="Dhanesh Gawde">
+                        <input type="hidden" name="book_price" value="250">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_13.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book13.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Constellation of Scars</h2>
+                    <p class="writer">Supriya Chopda</p>
+                    <div class="categories">Non-fiction, Romance</div>
+                    <p class="book_price">Rs-200<sub><del>Rs-250</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Constellation of Scars">
+                        <input type="hidden" name="author_name" value="Supriya Chopda">
+                        <input type="hidden" name="book_price" value="200">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_14.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book14.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
+                    <h2>Mr Family Affection</h2>
+                    <p class="writer">S.krishnaveni</p>
+                    <div class="categories"> Romance</div>
+                    <p class="book_price">Rs-160<sub><del>Rs-170</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="Mr Family Affection">
+                        <input type="hidden" name="author_name" value="S.krishnaveni">
+                        <input type="hidden" name="book_price" value="160">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
 
             </div>
 
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{ url_for('static', filename='bookmaster_img/book_15.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book15.jpg') }}">
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Buy</a>
-                </div>               
-
+                    <h2>15 Reasons to live</h2>
+                    <p class="writer">Dhanesh Gawde</p>
+                    <div class="categories">Non-fiction</div>
+                    <p class="book_price">Rs-100<sub><del>Rs-150</del></sub></p>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="book_name" value="15 Reasons to live">
+                        <input type="hidden" name="author_name" value="Dhanesh Gawde">
+                        <input type="hidden" name="book_price" value="100">
+                        <button type="submit" class="f_btn">Buy</button>
+                    </form>
+                </div>
             </div>
-
-            
-
         </div>
 
     </div>
 
 
 
-    
+
     <!--Arrivals-->
 
     <div id="arrivals1" class="arrivals">
@@ -421,10 +517,10 @@
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_1.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book7.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Pathik</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -432,16 +528,16 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
+                    
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_2.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book8.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Utopia</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -449,16 +545,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_3.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book12.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Ek Duje ke Vaste</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -466,16 +561,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_4.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book11.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>stolen heart</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -483,16 +577,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_5.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book4.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Gunaho ke Devta</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -500,16 +593,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_6.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book5.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Suraj ka Satva Ghoda</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -517,16 +609,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_7.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book6.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Asad ke Din</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -534,16 +625,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_8.webp') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book14.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>My Family Affection</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -551,16 +641,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_9.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/krishna1.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Krishna shobiti</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -568,16 +657,15 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
             <div class="arrivals_card">
                 <div class="arrivals_image">
-                    <img src="{{ url_for('static', filename='bookmaster_img/arrival_10.jpg') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/book2.jpg') }}">
                 </div>
                 <div class="arrivals_tag">
-                    <p>New Arrivals</p>
+                    <p>Mitro Marjani</p>
                     <div class="arrivals_icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -585,7 +673,6 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <a href="#" class="arrivals_btn">Buy</a>
                 </div>
             </div>
 
@@ -607,13 +694,13 @@
             <div class="review_card">
                 <i class="fa-solid fa-quote-right"></i>
                 <div class="card_top">
-                    <img src="{{ url_for('static', filename='bookmaster_img/review_1.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/puja.png') }}">
                 </div>
                 <div class="card">
-                    <h2>John Deo</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eos doloribus iure 
-                        distinctio! Eos dolorem quam, nisi amet saepe totam, quas quidem laboriosam dolore, 
-                        tenetur itaque nostrum voluptas excepturi aut.
+                    <h2>Puja</h2>
+                    <p>My experiences with Milaan Publication house have been amazing. It is because of their
+                        encouragement that I have been able to learn to write so well at such a young age.
+                        
                     </p>
                     <div class="review_icon">
                         <i class="fa-solid fa-star"></i>
@@ -628,13 +715,13 @@
             <div class="review_card">
                 <i class="fa-solid fa-quote-right"></i>
                 <div class="card_top">
-                    <img src="{{ url_for('static', filename='bookmaster_img/review_2.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/soni.png') }}">
                 </div>
                 <div class="card">
-                    <h2>John Deo</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eos doloribus iure 
-                        distinctio! Eos dolorem quam, nisi amet saepe totam, quas quidem laboriosam dolore, 
-                        tenetur itaque nostrum voluptas excepturi aut.
+                    <h2>Sanju Soni</h2>
+                    <p>Working with Milaan Publication House has been a transformative experience for me as a
+                        female author.The team’s unwavering support, encouragement, and respect for my creative
+                        vision have been truly empowering.
                     </p>
                     <div class="review_icon">
                         <i class="fa-solid fa-star"></i>
@@ -649,13 +736,13 @@
             <div class="review_card">
                 <i class="fa-solid fa-quote-right"></i>
                 <div class="card_top">
-                    <img src="{{ url_for('static', filename='bookmaster_img/review_3.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/sanji.png') }}">
                 </div>
                 <div class="card">
-                    <h2>John Deo</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eos doloribus iure 
-                        distinctio! Eos dolorem quam, nisi amet saepe totam, quas quidem laboriosam dolore, 
-                        tenetur itaque nostrum voluptas excepturi aut.
+                    <h2>Sanjeebani</h2>
+                    <p>I am a budding writer, passionate about making people feel heard and seen.
+                        Milaan publication have played a pivotal role in this journey. Participating in their anthologies
+                        made me aware of my true potential and inspired me to reach greater heights.
                     </p>
                     <div class="review_icon">
                         <i class="fa-solid fa-star"></i>
@@ -670,13 +757,13 @@
             <div class="review_card">
                 <i class="fa-solid fa-quote-right"></i>
                 <div class="card_top">
-                    <img src="{{ url_for('static', filename='bookmaster_img/review_4.png') }}">
+                    <img src="{{ url_for('static', filename='bookmaster_img/gouri.png') }}">
                 </div>
                 <div class="card">
-                    <h2>John Deo</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eos doloribus iure 
-                        distinctio! Eos dolorem quam, nisi amet saepe totam, quas quidem laboriosam dolore, 
-                        tenetur itaque nostrum voluptas excepturi aut.
+                    <h2>Gauri puranik</h2>
+                    <p>As a young new writer, I lack the courage to publish and have little support. However,
+                        Shekhar Milan Publication encourages and supports my writing, helping me see myself as a
+                        true writer.
                     </p>
                     <div class="review_icon">
                         <i class="fa-solid fa-star"></i>
@@ -705,7 +792,7 @@
 
 
     <!--Blog-->
-    
+
     <div id="blog1" class="blog">
         <h1>Our Blog</h1>
         <div class="blog_box">
@@ -717,8 +804,8 @@
                 <div class="blog_tag">
                     <h2>Bloger</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quos quis quasi ut 
-                        impedit reiciendis voluptatem rem esse ratione omnis, laudantium earum. Aperiam 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quos quis quasi ut
+                        impedit reiciendis voluptatem rem esse ratione omnis, laudantium earum. Aperiam
                         nesciunt dolore aliquam repellat consequatur amet ducimus.
                     </p>
                     <div class="blog_icon">
@@ -735,8 +822,8 @@
                 <div class="blog_tag">
                     <h2>Bloger</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quos quis quasi ut 
-                        impedit reiciendis voluptatem rem esse ratione omnis, laudantium earum. Aperiam 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quos quis quasi ut
+                        impedit reiciendis voluptatem rem esse ratione omnis, laudantium earum. Aperiam
                         nesciunt dolore aliquam repellat consequatur amet ducimus.
                     </p>
                     <div class="blog_icon">
@@ -753,8 +840,8 @@
                 <div class="blog_tag">
                     <h2>Bloger</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quos quis quasi ut 
-                        impedit reiciendis voluptatem rem esse ratione omnis, laudantium earum. Aperiam 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quos quis quasi ut
+                        impedit reiciendis voluptatem rem esse ratione omnis, laudantium earum. Aperiam
                         nesciunt dolore aliquam repellat consequatur amet ducimus.
                     </p>
                     <div class="blog_icon">
@@ -777,11 +864,15 @@
         <div class="footer_main">
 
             <div class="tag">
-                <img src="{{ url_for('static', filename='bookmaster_img/logo.png') }}">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est quaerat ipsa aspernatur ad 
-                    sequi, dolore eveniet vitae quasi. Excepturi ipsa odio impedit sequi at hic velit, minus 
-                    vero sint. Voluptas?
+                <img src="{{ url_for('static', filename='bookmaster_img/logo1.png') }}">
+                <p  style="height: 30vh; overflow-y: auto">
+                    At Milaan Publication house,our vision extends beyond mere publication. We aspire to
+cultivate a nurturing environment where creativity thrives, voices resonate, and stories
+captivate hearts worldwide. Our goal is to not only publish exceptional works but also to
+empower authors to reach their fullest potential. Through our dedication to excellence in
+editing, design, and marketing, we aim to amplify your voices and connect your stories with a
+global audience.
+
                 </p>
 
             </div>
@@ -794,15 +885,15 @@
                 <a href="#">Arrivals</a>
                 <a href="#">Reviews</a>
                 <a href="#">Blog</a>
-                
+
             </div>
 
             <div class="tag">
                 <h1>Contact Info</h1>
-                <a href="#"><i class="fa-solid fa-phone"></i>+94 12 345 6789</a>
-                <a href="#"><i class="fa-solid fa-phone"></i>+94 32 444 699</a>
-                <a href="#"><i class="fa-solid fa-envelope"></i>bookstore123@gmail.com</a>
-                
+                <a href="#"><i class="fa-solid fa-phone"></i>+91-8957795819</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+91-7388359493</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>Milaanyugampublication@gmail.com</a>
+
             </div>
 
             <div class="tag">
@@ -813,41 +904,44 @@
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-linkedin-in"></i>
                 </div>
-                
+
             </div>
 
             <div class="tag">
-				<h1>Newsletter</h1>
-				<form action="/subscriber" method="post">  <div class="search_bar">
-						<input type="text" name="email" placeholder="Your email id here">  <button type="submit">Subscribe</button>
-					</div>
-				</form>
-				<div id="subscribe-message" style="display: none;"></div>  <script>
-					document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-						event.preventDefault();  // Prevent default form submission
-					  
-						// Submit the form using AJAX
-						fetch('/subscriber', {
-						  method: 'POST',
-						  body: new FormData(document.getElementById('subscribe-form'))  // Replace with your form ID
-						})
-						.then(response => response.json())
-						.then(data => {
-						  // Update the popup message content directly
-						  document.getElementById('subscribe-message').textContent = data.message;
-					  
-						  // Show the popup message (adjust styling as needed)
-						  document.getElementById('subscribe-message').style.display = 'block';
-					  
-						  // Optionally hide the message after a few seconds
-						  setTimeout(() => {
-							document.getElementById('subscribe-message').style.display = 'none';
-						  }, 3000);  // Hide after 3 seconds (adjust as needed)
-						});
-					  });
-					</script>
-			</div>            
-            
+                <h1>Newsletter</h1>
+                <form action="/subscriber" method="post">
+                    <div class="search_bar">
+                        <input type="text" name="email" placeholder="Your email id here"> <button
+                            type="submit">Subscribe</button>
+                    </div>
+                </form>
+                <div id="subscribe-message" style="display: none;"></div>
+                <script>
+                    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
+                        event.preventDefault();  // Prevent default form submission
+
+                        // Submit the form using AJAX
+                        fetch('/subscriber', {
+                            method: 'POST',
+                            body: new FormData(document.getElementById('subscribe-form'))  // Replace with your form ID
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                // Update the popup message content directly
+                                document.getElementById('subscribe-message').textContent = data.message;
+
+                                // Show the popup message (adjust styling as needed)
+                                document.getElementById('subscribe-message').style.display = 'block';
+
+                                // Optionally hide the message after a few seconds
+                                setTimeout(() => {
+                                    document.getElementById('subscribe-message').style.display = 'none';
+                                }, 3000);  // Hide after 3 seconds (adjust as needed)
+                            });
+                    });
+                </script>
+            </div>
+
         </div>
     </footer>
 
@@ -855,6 +949,7 @@
 
 
 
-    
+
 </body>
+
 </html>
